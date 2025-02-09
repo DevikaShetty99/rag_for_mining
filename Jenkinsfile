@@ -7,7 +7,9 @@ pipeline {
   stages {
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/DevikaShetty99/rag_for_mining.git'
+        git branch: 'main', 
+            credentialsId: 'github-credentials', 
+            url: 'https://github.com/DevikaShetty99/rag_for_mining.git'
       }
     }
     stage('Build image') {

@@ -6,7 +6,6 @@ pipeline {
     dockerimagename = "bravinwasike/react-app"
     dockerImage = ""
   }
-  agent any
   stages {
     stage('Checkout Source') {
       steps {
